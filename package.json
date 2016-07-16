@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/april-lundy/Financial-Planning#readme",
   "dependencies": {
-    "sequelize": "^3.23.4"
+    "sequelize": "^3.23.4",
+    "sqlite3": "^3.1.4"
   }
 }
