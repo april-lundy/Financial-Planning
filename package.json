@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/april-lundy/Financial-Planning/issues"
   },
-  "homepage": "https://github.com/april-lundy/Financial-Planning#readme"
+  "homepage": "https://github.com/april-lundy/Financial-Planning#readme",
+  "dependencies": {
+    "sequelize": "^3.23.4"
+  }
 }
