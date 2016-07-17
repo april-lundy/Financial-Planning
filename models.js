@@ -9,7 +9,7 @@ var connection = new Sequelize({
 
 });
 
-var LiquidAssest = connection.define("liquid_asset", {
+var LiquidAsset = connection.define("liquid_asset", {
 
 	name: Sequelize.STRING,
 	value: Sequelize.INTEGER,
@@ -17,7 +17,7 @@ var LiquidAssest = connection.define("liquid_asset", {
 	compound_period: Sequelize.INTEGER
 });
 
-var StaticAssest = connection.define("static_asset", {
+var StaticAsset = connection.define("static_asset", {
 
 	name: Sequelize.STRING,
 	value: Sequelize.INTEGER,
@@ -25,24 +25,16 @@ var StaticAssest = connection.define("static_asset", {
 	compound_period: Sequelize.INTEGER
 });
 
-var RecurringAssest = connection.define("recurring_asset", {
+var RecurringAsset = connection.define("recurring_asset", {
 
 	name: Sequelize.STRING,
 	value: Sequelize.INTEGER,
 	recurrence_period: Sequelize.INTEGER
 });
 
-connection.sync()
-	.then(function() {
-		return LiquidAssest.create({
-			name: "Savings",
-			value: 0,
-			interest_rate: 0,
-			compound_period: 0
-
-		})
-
-	})
-	.then(function(record) {
-		console.log(record.toJSON());
-	})
+module.exports = {
+	connection: connection,
+	LiquidAsset: LiquidAsset,
+	StaticAsset: StaticAsset,
+	RecurringAsset: RecurringAsset,
+}
