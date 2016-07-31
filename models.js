@@ -9,6 +9,8 @@ var connection = new Sequelize({
 
 });
 
+
+// Savings, Property
 var LiquidAsset = connection.define("liquid_asset", {
 
 	name: Sequelize.STRING,
@@ -17,6 +19,7 @@ var LiquidAsset = connection.define("liquid_asset", {
 	compound_period: Sequelize.INTEGER
 });
 
+// Retirement, Stocks, Disability, Life Insurance
 var StaticAsset = connection.define("static_asset", {
 
 	name: Sequelize.STRING,
@@ -25,6 +28,7 @@ var StaticAsset = connection.define("static_asset", {
 	compound_period: Sequelize.INTEGER
 });
 
+// Salary
 var RecurringAsset = connection.define("recurring_asset", {
 
 	name: Sequelize.STRING,
