@@ -6,9 +6,14 @@ var models = require('./models');
 var queries = require('./queries');
 var commands = require('./commands');
 
-commands
-	.delimiter('Finance >')
-	.show();
+models.connection.sync()
+	.then(function(){
+		commands
+			.delimiter('Finance >')
+			.show();		
+	})
+
+
 
 /*
 console.log(queries.totalLiquidAssets);
