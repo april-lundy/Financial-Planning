@@ -19,6 +19,7 @@
   "homepage": "https://github.com/april-lundy/Financial-Planning#readme",
   "dependencies": {
     "sequelize": "^3.23.4",
-    "sqlite3": "^3.1.4"
+    "sqlite3": "^3.1.4",
+    "vorpal": "^1.11.2"
   }
 }
